@@ -1,0 +1,13 @@
+{
+	auto_https off
+}
+
+:80 {
+	handle /* {
+		reverse_proxy http://frontend:80
+	}
+
+	handle /api/* {
+		reverse_proxy http://backend:3000
+	}
+}

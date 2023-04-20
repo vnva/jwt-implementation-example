@@ -1,0 +1,10 @@
+{
+  "name": "@libs/jwt",
+  "main": "build/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "tsc --build"
+  }
+}

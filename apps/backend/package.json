@@ -1,0 +1,13 @@
+{
+  "name": "@apps/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "build": "tsc --build && tsc-alias"
+  },
+  "author": "",
+  "license": "ISC"
+}

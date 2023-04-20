@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-base;
+  @apply font-bold;
+}
+
+* {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-neutral-300;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-neutral-600;
+  }
+
+  scrollbar-width: thin;
+}
+
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}

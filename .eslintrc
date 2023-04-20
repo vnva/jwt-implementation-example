@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "plugins": ["import"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true
+  },
+  "ignorePatterns": ["**/*.js"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index",
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@/**",
+                "group": "parent"
+              },
+              {
+                "pattern": "@libs/**",
+                "group": "internal"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["builtin", "object"],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
